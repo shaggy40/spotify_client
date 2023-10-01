@@ -8,7 +8,9 @@ const SingleSongCard = ({info,playSound}) =>{
   return(
    <div className="flex hover:bg-gray-400 hover:bg-opacity-20 p-2 rounded-sm" 
    onClick={()=>{
+    console.log("hello")
     setCurrentSong(info);
+    playSound();
     }}>
 
     <div className="w-12 h-12 bg-cover bg-center" style={{

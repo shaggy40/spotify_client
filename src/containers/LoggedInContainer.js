@@ -30,7 +30,6 @@ const LoggedInContainer = ({children,  currActiveScr})=>{
       return;
     }
     changeSong(currentSong.track);
-    console.log("here");
   },[currentSong && currentSong.track]);
 
   const addSongToPlaylist = async (playlistId) => {
