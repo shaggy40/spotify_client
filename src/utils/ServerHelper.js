@@ -1,7 +1,7 @@
 // import {backendUrl} from "./config"
-
+const backendUrl = "https://spotify-server-8u08.onrender.com/";
 export const makeUnauthenticatedPOSTRequest = async (route, body) => {
-    const response = await fetch("https://spotify-server-8u08.onrender.com/" + route, {
+    const response = await fetch(backendUrl + route, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
