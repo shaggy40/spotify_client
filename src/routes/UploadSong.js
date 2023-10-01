@@ -1,7 +1,4 @@
-import spotify_logo from"../assest/images/spotify_logo_white.svg"
-import IconText from "../components/shared/IconText"
-import {Icon} from "@iconify/react"
-import TextWithHover from "../components/shared/TextWithHover"
+
 import TextInput from "../components/shared/TextInput"
 import CloudinaryUpload from "../components/shared/CloudinaryUpload"
 import { useState } from "react"

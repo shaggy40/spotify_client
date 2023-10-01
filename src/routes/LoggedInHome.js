@@ -1,9 +1,4 @@
-import spotify_logo from"../assest/images/spotify_logo_white.svg"
-import IconText from "../components/shared/IconText"
-import {Icon} from "@iconify/react"
-import TextWithHover from "../components/shared/TextWithHover"
-import { useState } from "react";
-import {Howl} from 'howler';
+
 import LoggedInContainer from "../containers/LoggedInContainer";
 
 const focusCardsData = [
