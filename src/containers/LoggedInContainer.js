@@ -141,7 +141,7 @@ const LoggedInContainer = ({children,  currActiveScr})=>{
             <div className="w-1/3 flex justify-around h-full items-center">
              <TextWithHover displayText={"Upload Song"} onClick={()=> nav('/uploadsong')}/>
              <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer">
-             {(userData.firstName).substring(0,1)+(userData.lastName).substring(0,1)}
+             {userData!=""?(userData.firstName.substring(0,1)+userData.lastName.substring(0,1)):"AC"}
               </div>
             </div>
           </div>
