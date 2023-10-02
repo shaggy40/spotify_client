@@ -20,6 +20,18 @@ const LoggedInContainer = ({children,  currActiveScr})=>{
 
   const firstUpdate = useRef(true);
 
+  const [userData,setUserData] = useState([]);
+  useEffect(()=>{
+    const getData = async () => {
+      const response = await makeAuthenticatedGETRequest(
+        "/playlist/get/userDetails"
+      )
+      // console.log(response);
+      setUserData(response.data);
+    }
+    getData();
+   },[])
+
   useLayoutEffect(()=>{
     if(firstUpdate.current)
     {
@@ -129,7 +141,7 @@ const LoggedInContainer = ({children,  currActiveScr})=>{
             <div className="w-1/3 flex justify-around h-full items-center">
              <TextWithHover displayText={"Upload Song"} onClick={()=> nav('/uploadsong')}/>
              <div className="bg-white w-10 h-10 flex items-center justify-center rounded-full font-semibold cursor-pointer">
-                AC
+             {(userData.firstName).substring(0,1)+(userData.lastName).substring(0,1)}
               </div>
             </div>
           </div>
