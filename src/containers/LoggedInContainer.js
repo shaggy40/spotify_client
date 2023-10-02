@@ -2,14 +2,14 @@ import spotify_logo from"../assest/images/spotify_logo_white.svg"
 import IconText from "../components/shared/IconText"
 import {Icon} from "@iconify/react"
 import TextWithHover from "../components/shared/TextWithHover"
-import {useRef, useState } from "react";
+import {useRef, useState,useEffect } from "react";
 import {Howl} from 'howler';
 import { useContext ,useLayoutEffect} from "react";
 import songContext from "../contexts/songContext";
 import { useNavigate } from "react-router-dom";
 import CreatePlaylist from "../modals/CreatePlaylist";
 import AddToPlaylist from "../modals/AddToPlaylist";
-import { makeAuthenticatedPOSTRequest } from "../utils/ServerHelper";
+import { makeAuthenticatedPOSTRequest,makeAuthenticatedGETRequest } from "../utils/ServerHelper";
 
 
 const LoggedInContainer = ({children,  currActiveScr})=>{
